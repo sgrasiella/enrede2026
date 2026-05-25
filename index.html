@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parque Tecnológico Territórios de Minas | ENREDE 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Outfit:wght@900&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="pres-style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Controls -->
+  <div class="controls">
+    <button class="ctrl-btn" id="prevBtn" onclick="changeSlide(-1)" title="Anterior">
+      <i class="ph ph-caret-left"></i>
+    </button>
+    <div class="slide-counter">
+      <span id="currentSlide">1</span> / <span id="totalSlides">14</span>
+    </div>
+    <button class="ctrl-btn" id="nextBtn" onclick="changeSlide(1)" title="Próximo">
+      <i class="ph ph-caret-right"></i>
+    </button>
+    <button class="ctrl-btn" id="homeBtn" onclick="goHome()" title="Início" style="margin-left: 10px;">
+      <i class="ph ph-house"></i>
+    </button>
+    <button class="ctrl-btn" id="fullscreenBtn" onclick="toggleFullscreen()" title="Tela Cheia">
+      <i class="ph ph-corners-out"></i>
+    </button>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- Slide Deck -->
+  <main class="deck">
+
+    <!-- SLIDE 1: CAPA PRINCIPAL -->
+    <section class="slide slide-cover active" id="s1">
+      <div class="cover-bg">
+        <div class="cover-stripe stripe-green"></div>
+        <div class="cover-stripe stripe-red"></div>
+      </div>
+      <div class="cover-grid">
+        <div class="cover-right" style="align-items: center; text-align: center; padding: 0 40px;">
+          <img src="LogoTerritoriosDeMinas.png" alt="Parque Tecnológico Territórios de Minas"
+            class="cover-park-logo reveal-up">
+          <h1 class="cover-title reveal-up delay-1">
+            Parque Tecnológico<br>
+            <span class="highlight-text">Interiorizado</span>
+          </h1>
+          <p class="cover-sub reveal-up delay-2" style="color: #fff; text-align: center;">
+            <span style="text-transform: uppercase; font-weight: bold;">Impacto dos Institutos Federais no
+              Desenvolvimento Regional</span><br>
+            <span style="font-weight: 400; font-size: 0.9em; opacity: 0.9;">- ENREDE - Maio de 2026</span>
+          </p>
+          <div class="cover-meta reveal-up delay-3"
+            style="justify-content: center; flex-direction: column; align-items: center; gap: 10px;">
+            <img src="ifmg-vertical-branca.png" alt="IFMG" class="cover-ifmg-logo"
+              style="mix-blend-mode: screen; height: 75px; width: auto; max-width: 100%;">
+            <span style="color: #fff; font-weight: 500; font-size: 1.2rem; text-align: center;">Profa. Dra. Gislayne
+              Elisana Gonçalves<br><span
+                style="font-size: 0.95rem; font-weight: 400; color: rgba(255,255,255,0.8);">Pró-Reitora de Inovação,
+                Pesquisa e Pós-Graduação do IFMG</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: O QUE É -->
+    <section class="slide slide-dark" id="s2">
+      <div class="slide-accent-bar left green"></div>
+      <div class="slide-content">
+        <div class="slide-tag">Conceito</div>
+        <h2 class="slide-title">O que é um<br><span class="text-green">Parque Tecnológico?</span></h2>
+        <p class="slide-desc">Um ambiente que conecta empresas, pesquisadores e estudantes para gerar soluções
+          inovadoras.</p>
+        <div class="icon-row">
+          <div class="icon-block">
+            <div class="icon-circle green-bg"><i class="ph ph-lightbulb"></i></div>
+            <span>Espírito<br>Empreendedor</span>
+          </div>
+          <div class="connector"></div>
+          <div class="icon-block">
+            <div class="icon-circle red-bg"><i class="ph ph-graduation-cap"></i></div>
+            <span>Profissionais<br>Qualificados</span>
+          </div>
+          <div class="connector"></div>
+          <div class="icon-block">
+            <div class="icon-circle white-bg"><i class="ph ph-rocket-launch"></i></div>
+            <span>Negócios<br>Inovadores</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: PARCERIAS ESSENCIAIS -->
+    <section class="slide slide-green" id="s4">
+      <div class="slide-accent-bar left white"></div>
+      <div class="slide-content">
+        <div class="slide-tag tag-dark" style="color: #fff; border-color: rgba(255,255,255,0.3);">PARCERIAS ESSENCIAIS
+        </div>
+        <h2 class="slide-title text-white">Três atores.<br>Um ecossistema.</h2>
+        <div class="trio-grid">
+          <div class="trio-card">
+            <div class="trio-number" style="color: var(--red);">01</div>
+            <h3>IFMG</h3>
+            <p>Base acadêmica, gerador de pesquisa, desenvolvimento de tecnologias e formação qualificada.</p>
+          </div>
+          <div class="trio-card trio-highlight">
+            <div class="trio-number" style="color: var(--red);">02</div>
+            <h3>Governo</h3>
+            <p>Criação de políticas de fomento, infraestrutura e incentivos fiscais para o ecossistema.</p>
+          </div>
+          <div class="trio-card">
+            <div class="trio-number" style="color: var(--red);">03</div>
+            <h3>Indústria</h3>
+            <p>Transformação de conhecimento em soluções reais para o mercado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: BENEFÍCIOS -->
+    <section class="slide slide-dark" id="s5">
+      <div class="slide-accent-bar right red"></div>
+      <div class="slide-content">
+        <div class="slide-tag">Por que importa?</div>
+        <h2 class="slide-title">Benefícios <span class="text-red">Concretos</span></h2>
+        <div class="benefits-container">
+          <div class="circular-benefits">
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+
+            <div class="central-icon">
+              <i class="ph ph-rocket-launch"></i>
+              <span>IMPACTO</span>
+            </div>
+
+            <div class="benefit-node node-social">
+              <div class="benefit-icon"><i class="ph ph-users-three"></i></div>
+              <h4>Social</h4>
+            </div>
+
+            <div class="benefit-node node-eco">
+              <div class="benefit-icon"><i class="ph ph-chart-line-up"></i></div>
+              <h4>Econômico</h4>
+            </div>
+
+            <div class="benefit-node node-tec">
+              <div class="benefit-icon"><i class="ph ph-cpu"></i></div>
+              <h4>Tecnológico</h4>
+            </div>
+
+            <div class="benefit-node node-edu">
+              <div class="benefit-icon"><i class="ph ph-books"></i></div>
+              <h4>Educacional</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SLIDE 5: MODELO INOVADOR -->
+    <section class="slide slide-split" id="s3">
+      <div class="split-half split-dark" style="justify-content: flex-start; padding-top: 70px; padding-bottom: 20px;">
+        <div class="slide-tag">O Modelo</div>
+        <h2 class="slide-title-sm">Parque Tecnológico<br><span class="text-green">Territórios de Minas</span></h2>
+
+        <div class="highlight-box">
+          <p style="font-size: 0.95rem; line-height: 1.4;">Aproveita a infraestrutura e as competências já existentes nos diversos <strong>campi do IFMG</strong> para
+            democratizar o acesso à inovação em Minas Gerais por meio da implantação das Unidades Tecnológicas nos
+            territórios.</p>
+        </div>
+
+        <div class="badge-row" style="margin-bottom: 20px;">
+          <span class="badge green-badge">22 campi</span>
+          <span class="badge red-badge">4 regiões</span>
+        </div>
+
+        <div class="vision-card reveal-up delay-2"
+          style="background: rgba(62, 207, 87, 0.15); border-left: 5px solid var(--green); padding: 15px 20px; border-radius: 0 12px 12px 0; box-shadow: 0 8px 20px rgba(0,0,0,0.4); backdrop-filter: blur(5px); border-right: 1px solid rgba(62, 207, 87, 0.2); border-top: 1px solid rgba(62, 207, 87, 0.2); border-bottom: 1px solid rgba(62, 207, 87, 0.2);">
+          <h3
+            style="color: var(--green); font-size: 1.2rem; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; text-transform: uppercase; letter-spacing: 1px;">
+            <i class="ph ph-eye" style="font-size: 1.5rem;"></i> Uma Visão
+          </h3>
+          <p style="font-size: 0.95rem; color: rgba(255,255,255,0.95); line-height: 1.4; font-style: italic; margin: 0;">
+            "Ser referência como instituição de educação profissional, científica e tecnológica, inovadora, sustentável,
+            socialmente inclusiva e articulada com as demandas da sociedade."
+          </p>
+        </div>
+      </div>
+      <div class="split-half split-image" style="position: relative; background: white;">
+        <!-- Base Image (Logos) -->
+        <img src="Logos - Fundo branco do parque tecnologico.png" alt="Logos Parque Tecnológico" class="map-img"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; z-index: 1; animation: highlightPulseBottom 8s infinite ease-in-out;">
+        <!-- Top Image (Map with gradient mask transition) -->
+        <img src="MapaUnidadesIFMG2026.jpg" alt="Mapa de unidades do IFMG" class="map-img"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%); animation: highlightPulseTop 8s infinite ease-in-out;">
+        <div class="map-overlay" style="z-index: 3;"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: ESTRUTURA EM REDE & PARQUE -->
+    <section class="slide slide-dark" id="s6">
+      <div class="slide-accent-bar left green"></div>
+      <div class="slide-content" style="display: flex; flex-direction: column; padding-top: 90px;">
+        <h2 class="slide-title" style="font-size: 2.2rem; margin-bottom: 5px; line-height: 1.2;">Parque Tecnológico
+          Territórios de Minas<br><span class="text-green" style="font-size: 1.6rem;">Um modelo descentralizado e
+            inovador</span></h2>
+
+        <div style="display: flex; gap: 50px; align-items: stretch; margin-top: 15px; flex-grow: 1;">
+
+          <!-- Coluna 1: Estrutura Principal -->
+          <div class="network-main" style="flex: 1.2; display: flex; flex-direction: column; justify-content: center;">
+            <div class="hub-card">
+              <div class="hub-header" style="margin-bottom: 10px;">
+                <i class="ph ph-buildings"></i>
+                <div class="hub-info">
+                  <h3>Sede / Gestão</h3>
+                  <p>Belo Horizonte | SERPRO</p>
+                </div>
+              </div>
+              <p class="hub-desc">Centro de comando e articulação estratégica do ecossistema.</p>
+            </div>
+
+            <div class="node-arrow" style="padding: 5px 0;">
+              <i class="ph ph-arrow-down"></i>
+            </div>
+
+            <div class="hub-card highlight">
+              <div class="hub-header">
+                <i class="ph ph-map-pin-line"></i>
+                <div class="hub-info">
+                  <h3>Unidade Tecnológica</h3>
+                  <p>Implantada em São Gonçalo do Rio Abaixo</p>
+                </div>
+              </div>
+              <p class="hub-desc">Polo operacional de inovação e desenvolvimento regional no município.</p>
+            </div>
+          </div>
+
+          <!-- Separador -->
+          <div
+            style="width: 2px; background: linear-gradient(to bottom, transparent, rgba(62, 207, 87, 0.4), transparent);">
+          </div>
+
+          <!-- Coluna 2: Detalhes -->
+          <div class="network-details"
+            style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 15px; background: #000; padding: 30px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
+            <div class="detail-item">
+              <i class="ph ph-share-network"></i>
+              <div>
+                <h4>Estrutura em Rede</h4>
+                <p>Integração total entre a Reitoria e as bases produtivas do estado.</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="ph ph-users-four"></i>
+              <div>
+                <h4>Fomento Regional</h4>
+                <p>Soluções customizadas para as demandas de cada território.</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="ph ph-lightning"></i>
+              <div>
+                <h4>Agilidade Operacional</h4>
+                <p>Descentralização que garante rápida resposta às oportunidades locais/regionais.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: ESTUDO DE CASO - IMPACTO -->
+    <section class="slide slide-split" id="s7">
+      <div class="split-half split-dark" style="color: #fff;">
+        <div class="slide-tag" style="color: #fff; border-color: rgba(255,255,255,0.4);">Estudo de Caso</div>
+        <h2 class="slide-title-sm" style="color: #fff;">Impacto da<br><span class="text-green">Interiorização</span>
+        </h2>
+        <p class="slide-desc-sm" style="color: #fff; opacity: 1;">O desenvolvimento regional impulsionado pela rede IFMG
+          democratiza o acesso à alta tecnologia e inovação.</p>
+
+        <div class="case-metrics">
+          <div class="c-metric">
+            <i class="ph ph-trend-up" style="color: var(--green);"></i>
+            <div>
+              <strong style="color: #fff;">Economia Local</strong>
+              <span style="color: #fff; opacity: 1;">Atração de investimentos e novos negócios como política de
+                Diversificação Econômica.</span>
+            </div>
+          </div>
+          <div class="c-metric">
+            <i class="ph ph-student" style="color: var(--green);"></i>
+            <div>
+              <strong style="color: #fff;">Talentos Retidos</strong>
+              <span style="color: #fff; opacity: 1;">Política de atração e permanência de talentos qualificados.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-half split-dark-right"
+        style="display:flex; align-items:center; justify-content: center; padding:40px;">
+        <div class="glass-card-sm"
+          style="flex:1; display: flex; flex-direction: column; align-items: center; max-width: 400px; background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
+          <!-- Foto Circular UTSGRA -->
+          <img src="UTSGRA-Frente.jpeg" alt="UT SGRA Frente"
+            style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 3px solid var(--green); margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+
+          <!-- Logo UT -->
+          <img src="LogoUT -Fundo Preto.png" alt="Unidade Tecnológica" class="ut-card-img"
+            style="width: 85%; height: auto; margin-bottom: 20px;">
+
+          <!-- Objetivos Estratégicos (Movidos do Slide 8) -->
+          <div style="width: 100%; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+            <h4
+              style="color: var(--green); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85rem; margin-bottom: 15px; text-align: center;">
+              Objetivos Estratégicos do Parque Tecnológico</h4>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <i class="ph ph-trend-up" style="font-size: 1.6rem; color: #fff; opacity: 0.8;"></i>
+                <div>
+                  <h4 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Fomentar a Inovação</h4>
+                  <p style="font-size: 0.85rem; color: rgba(255,255,255,0.65); margin: 0; line-height: 1.3;">Pesquisa
+                    aplicada e transferência de tecnologia.</p>
+                </div>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <i class="ph ph-certificate" style="font-size: 1.6rem; color: #fff; opacity: 0.8;"></i>
+                <div>
+                  <h4 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Qualificação Profissional</h4>
+                  <p style="font-size: 0.85rem; color: rgba(255,255,255,0.65); margin: 0; line-height: 1.3;">Programas
+                    de capacitação alinhados ao mercado.</p>
+                </div>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <i class="ph ph-rocket-launch" style="font-size: 1.6rem; color: #fff; opacity: 0.8;"></i>
+                <div>
+                  <h4 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Apoiar Startups</h4>
+                  <p style="font-size: 0.85rem; color: rgba(255,255,255,0.65); margin: 0; line-height: 1.3;">Estrutura
+                    de incubação e aceleração de negócios.</p>
+                </div>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <i class="ph ph-handshake" style="font-size: 1.6rem; color: #fff; opacity: 0.8;"></i>
+                <div>
+                  <h4 style="font-size: 1rem; color: #fff; margin-bottom: 4px;">Academia–Indústria</h4>
+                  <p style="font-size: 0.85rem; color: rgba(255,255,255,0.65); margin: 0; line-height: 1.3;">
+                    Desenvolvimento conjunto de projetos tecnológicos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: COMPOSIÇÃO DA UNIDADE TECNOLÓGICA -->
+    <!-- SLIDE 8: COMPOSIÇÃO E OBJETIVOS DA UNIDADE TECNOLÓGICA -->
+    <section class="slide slide-dark" id="s8">
+      <div class="slide-accent-bar left green"></div>
+      <div class="slide-content" style="padding-top: 50px; justify-content: flex-start; gap: 0;">
+        <h2 class="slide-title" style="font-size:2.2rem; margin-bottom:0px;">Pilares da <span class="text-green">Unidade
+            Tecnológica</span></h2>
+        <p class="slide-desc" style="margin-bottom:15px; font-size:1.05rem;">Parque Tecnológico do IFMG Territórios de
+          Minas</p>
+
+        <!-- OS 5 ITENS (DESTAQUE) -->
+        <div class="penta-grid" style="margin-top: 10px; margin-bottom: 25px;">
+          <div class="trio-card" style="text-align: center; padding: 20px;">
+            <div class="trio-number" style="color: #3ecf57; font-size: 2rem; margin-bottom: 5px;">01</div>
+            <i class="ph ph-lightbulb"
+              style="font-size: 2.5rem; color: #3ecf57; margin-bottom: 10px; display:block;"></i>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0;">Ambiente de Inovação</h3>
+          </div>
+          <div class="trio-card" style="text-align: center; padding: 20px;">
+            <div class="trio-number" style="color: #ff9f43; font-size: 2rem; margin-bottom: 5px;">02</div>
+            <i class="ph ph-briefcase"
+              style="font-size: 2.5rem; color: #ff9f43; margin-bottom: 10px; display:block;"></i>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0;">Ambiente Empresarial</h3>
+          </div>
+          <div class="trio-card" style="text-align: center; padding: 20px;">
+            <div class="trio-number" style="color: #f1c40f; font-size: 2rem; margin-bottom: 5px;">03</div>
+            <i class="ph ph-star" style="font-size: 2.5rem; color: #f1c40f; margin-bottom: 10px; display:block;"></i>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0;">Centros de Excelência</h3>
+          </div>
+          <div class="trio-card" style="text-align: center; padding: 20px;">
+            <div class="trio-number" style="color: #e74c3c; font-size: 2rem; margin-bottom: 5px;">04</div>
+            <i class="ph ph-graduation-cap"
+              style="font-size: 2.5rem; color: #e74c3c; margin-bottom: 10px; display:block;"></i>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0;">Desenv. Organizacional</h3>
+          </div>
+          <div class="trio-card" style="text-align: center; padding: 20px;">
+            <div class="trio-number" style="color: #3498db; font-size: 2rem; margin-bottom: 5px;">05</div>
+            <i class="ph ph-buildings"
+              style="font-size: 2.5rem; color: #3498db; margin-bottom: 10px; display:block;"></i>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0;">SERPRO</h3>
+          </div>
+        </div>
+
+        <!-- PRINCÍPIOS DE ATUAÇÃO -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 25px; width: 100%;">
+          <!-- Item 1 -->
+          <div
+            style="display: flex; gap: 15px; align-items: center; background: rgba(255,255,255,0.04); padding: 15px 20px; border-radius: 10px; border-left: 4px solid var(--green);">
+            <div style="color: var(--green); font-size: 1.5rem; font-weight: 800; opacity: 0.7;">01</div>
+            <p style="color: #fff; font-size: 1.05rem; margin: 0; line-height: 1.3;">Integração entre ensino, pesquisa,
+              empreendedorismo e inovação.</p>
+          </div>
+          <!-- Item 2 -->
+          <div
+            style="display: flex; gap: 15px; align-items: center; background: rgba(255,255,255,0.04); padding: 15px 20px; border-radius: 10px; border-left: 4px solid var(--green);">
+            <div style="color: var(--green); font-size: 1.5rem; font-weight: 800; opacity: 0.7;">02</div>
+            <p style="color: #fff; font-size: 1.05rem; margin: 0; line-height: 1.3;">Apoio ao desenvolvimento regional
+              sustentável e à competitividade de territórios de Minas Gerais.</p>
+          </div>
+          <!-- Item 3 -->
+          <div
+            style="display: flex; gap: 15px; align-items: center; background: rgba(255,255,255,0.04); padding: 15px 20px; border-radius: 10px; border-left: 4px solid var(--green);">
+            <div style="color: var(--green); font-size: 1.5rem; font-weight: 800; opacity: 0.7;">03</div>
+            <p style="color: #fff; font-size: 1.05rem; margin: 0; line-height: 1.3;">Conexão entre instituições,
+              empresas, governo e sociedade.</p>
+          </div>
+          <!-- Item 4 -->
+          <div
+            style="display: flex; gap: 15px; align-items: center; background: rgba(255,255,255,0.04); padding: 15px 20px; border-radius: 10px; border-left: 4px solid var(--green);">
+            <div style="color: var(--green); font-size: 1.5rem; font-weight: 800; opacity: 0.7;">04</div>
+            <p style="color: #fff; font-size: 1.05rem; margin: 0; line-height: 1.3;">Geração de valor, oportunidades e
+              impacto social.</p>
+          </div>
+        </div>
+
+        <div
+          style="background: linear-gradient(135deg, var(--green), #216a2b); box-shadow: 0 10px 30px rgba(62, 207, 87, 0.4); padding: 25px 30px; border-radius: 16px; text-align: center; width: 100%;">
+          <p
+            style="color: #ffffff; font-size: 1.45rem; font-weight: 500; margin: 0; line-height: 1.4; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+            Impulsionamos a <strong style="font-weight: 800;">inovação</strong>, o <strong
+              style="font-weight: 800;">empreendedorismo</strong> e a <strong style="font-weight: 800;">transformação
+              tecnológica</strong> para o desenvolvimento sustentável dos territórios de Minas.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SLIDE 8.1: AMBIENTE DE INOVAÇÃO -->
+    <section class="slide slide-dark" id="s8-1">
+      <div class="slide-accent-bar left green"></div>
+      <div class="slide-content">
+        <div class="slide-tag tag-green" style="margin-bottom: 10px;">Pilar 01</div>
+        <h4
+          style="color: rgba(255,255,255,0.5); font-weight: 500; font-size: 1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
+          Composição da Unidade Tecnológica | Parque Tecnológico Territórios de Minas</h4>
+        <h2 class="slide-title" style="color: #3ecf57; margin-bottom:10px; font-size: 2.2rem;"><i
+            class="ph ph-lightbulb"></i> Ambiente de Inovação</h2>
+        <p class="slide-desc" style="font-size: 1.15rem; max-width: 800px; margin-bottom: 20px;">Espaços e programas que
+          estimulam a criatividade, a colaboração e o empreendedorismo inovador.</p>
+        <div class="obj-list" style="max-width: 950px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div class="obj-item">
+            <i class="ph ph-rocket-launch" style="color: #3ecf57;"></i>
+            <div>
+              <h4>Pré-incubação</h4>
+              <p>Transformação de ideias em modelos de negócio viáveis.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <i class="ph ph-trend-up" style="color: #3ecf57;"></i>
+            <div>
+              <h4>Incubadora</h4>
+              <p>Desenvolvimento e consolidação de empresas inovadoras.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <i class="ph ph-users-three" style="color: #3ecf57;"></i>
+            <div>
+              <h4>Coworking</h4>
+              <p>Espaço colaborativo para trabalho, conexão e networking.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <i class="ph ph-hammer" style="color: #3ecf57;"></i>
+            <div>
+              <h4>Espaço Maker</h4>
+              <p>Infraestrutura para prototipagem e desenvolvimento de soluções.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8.2: AMBIENTE EMPRESARIAL -->
+    <section class="slide slide-dark" id="s8-2">
+      <div class="slide-accent-bar left" style="background: #ff9f43;"></div>
+      <div class="slide-content">
+        <div class="slide-tag" style="background: #ff9f43; color: #000; margin-bottom: 10px;">Pilar 02</div>
+        <h4
+          style="color: rgba(255,255,255,0.5); font-weight: 500; font-size: 1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
+          Composição da Unidade Tecnológica | Parque Tecnológico Territórios de Minas</h4>
+        <h2 class="slide-title" style="color: #ff9f43; margin-bottom:10px; font-size: 2.2rem;"><i
+            class="ph ph-briefcase"></i> Ambiente Empresarial</h2>
+        <p class="slide-desc" style="font-size: 1.15rem; max-width: 800px; margin-bottom: 20px;">Estruturas e serviços
+          que fortalecem empresas e promovem conexões com o mercado e investidores.</p>
+        <div class="obj-list" style="max-width: 950px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div class="obj-item">
+            <i class="ph ph-buildings" style="color: #ff9f43;"></i>
+            <div>
+              <h4>Hospedagem de Startups e Spin-offs</h4>
+              <p>Espaço e suporte para empresas originadas de pesquisa e inovação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8.3: CENTROS DE EXCELÊNCIA -->
+    <section class="slide slide-dark" id="s8-3">
+      <div class="slide-accent-bar left" style="background: #f1c40f;"></div>
+      <div class="slide-content">
+        <div class="slide-tag" style="background: #f1c40f; color: #000; margin-bottom: 10px;">Pilar 03</div>
+        <h4
+          style="color: rgba(255,255,255,0.5); font-weight: 500; font-size: 1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
+          Composição da Unidade Tecnológica | Parque Tecnológico Territórios de Minas</h4>
+        <h2 class="slide-title" style="color: #f1c40f; margin-bottom:10px; font-size: 2.2rem;"><i
+            class="ph ph-star"></i> Centros de Excelência</h2>
+        <p class="slide-desc" style="font-size: 1.15rem; max-width: 800px; margin-bottom: 20px;">Núcleos especializados
+          em áreas estratégicas de pesquisa, desenvolvimento e inovação aplicada.</p>
+        <div class="obj-list" style="max-width: 950px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div class="obj-item">
+            <i class="ph ph-cooking-pot" style="color: #f1c40f;"></i>
+            <div>
+              <h4>CEIPArte</h4>
+              <p>Centro de Excelência e Inovação em Produtos Alimentícios Artesanais.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <i class="ph ph-brain" style="color: #f1c40f;"></i>
+            <div>
+              <h4>CEIA-IFMG</h4>
+              <p>Centro de Excelência em Inteligência Artificial Aplicada do IFMG.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8.4: DESENVOLVIMENTO ORGANIZACIONAL -->
+    <section class="slide slide-dark" id="s8-4">
+      <div class="slide-accent-bar left red"></div>
+      <div class="slide-content">
+        <div class="slide-tag" style="background: #e74c3c; color: #fff; margin-bottom: 10px;">Pilar 04</div>
+        <h4
+          style="color: rgba(255,255,255,0.5); font-weight: 500; font-size: 1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
+          Composição da Unidade Tecnológica | Parque Tecnológico Territórios de Minas</h4>
+        <h2 class="slide-title" style="color: #e74c3c; margin-bottom:10px; font-size: 2.2rem;"><i
+            class="ph ph-graduation-cap"></i> Desenvolvimento Organizacional</h2>
+        <p class="slide-desc" style="font-size: 1.15rem; max-width: 800px; margin-bottom: 20px;">Programas e ações que
+          promovem competências, inovação e transformação nas organizações.</p>
+        <div class="obj-list" style="max-width: 950px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div class="obj-item">
+            <i class="ph ph-certificate" style="color: #e74c3c;"></i>
+            <div>
+              <h4>Cursos FIC</h4>
+              <p>Qualificação profissional e inserção no mundo do trabalho.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <i class="ph ph-puzzle-piece" style="color: #e74c3c;"></i>
+            <div>
+              <h4>FIC Técnico Modular</h4>
+              <p>Itinerários formativos flexíveis com certificações intermediárias.</p>
+            </div>
+          </div>
+          <div class="obj-item">
+            <i class="ph ph-books" style="color: #e74c3c;"></i>
+            <div>
+              <h4>Lato Sensu</h4>
+              <p>Pós-graduação voltada ao aprofundamento técnico e profissional.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8.5: SERPRO -->
+    <section class="slide slide-dark" id="s8-5">
+      <div class="slide-accent-bar left blue"></div>
+      <div class="slide-content" style="padding-top: 80px; justify-content: center;">
+        <div class="slide-tag" style="background: #3498db; color: #fff; margin-bottom: 10px;">Pilar 05</div>
+        <h4
+          style="color: rgba(255,255,255,0.5); font-weight: 500; font-size: 1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
+          Composição da Unidade Tecnológica | Parque Tecnológico Territórios de Minas</h4>
+        <h2 class="slide-title" style="color: #3498db; margin-bottom:10px; font-size: 2.2rem;"><i
+            class="ph ph-buildings"></i> SERPRO</h2>
+        <p class="slide-desc" style="font-size: 1.15rem; max-width: 800px; margin-bottom: 20px;">Parceria estratégica
+          para implantação de soluções integradas de dados, inteligência e tecnologia para apoiar a gestão pública e a
+          entrega de serviços ao cidadão, com foco nos seguintes eixos:</p>
+        <div
+          style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; max-width: 1100px; align-items: stretch;">
+          <div class="obj-item"
+            style="flex-direction: column; align-items: stretch; justify-content: center; height: 100%; padding: 40px 30px; gap: 20px;">
+            <div
+              style="display: flex; align-items: center; gap: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">
+              <i class="ph ph-city" style="color: #3498db; margin: 0; font-size: 2.5rem;"></i>
+              <h4 style="margin: 0; font-size: 1.6rem; color: #fff;">Cidades Inteligentes</h4>
+            </div>
+            <ul
+              style="color: rgba(255,255,255,0.8); font-size: 1.15rem; line-height: 1.6; padding-left: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 0;">
+              <li><strong>Mobilidade</strong></li>
+              <li><strong>Tecnologia e Inovação</strong></li>
+              <li><strong>Segurança</strong></li>
+              <li><strong>Economia</strong></li>
+              <li><strong>Bem-estar Social</strong></li>
+              <li><strong>Educação e Cultura</strong></li>
+              <li><strong>Infraestrutura Digital</strong></li>
+            </ul>
+          </div>
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="serpro_produtos.png" alt="Produtos SERPRO" class="reveal-up"
+              style="width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 15px 40px rgba(52, 152, 219, 0.4); border: 2px solid rgba(52, 152, 219, 0.2); object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SLIDE 15: FLUXOGRAMA (ESTRUTURA ORGANIZACIONAL) -->
+    <section class="slide slide-dark" id="s-fluxo">
+      <h2 class="slide-title"
+        style="position: absolute; top: 180px; left: 50px; font-size: 2.4rem; margin: 0; z-index: 10; text-align: left; line-height: 1.1;">
+        Estrutura<br><span class="text-green">Organizacional</span></h2>
+      <div class="slide-content" style="padding-top: 60px; justify-content: flex-start;">
+
+        <div class="org-chart" style="position: relative;">
+          <ul>
+            <li>
+              <!-- LEVEL 1 -->
+              <div class="org-node main-node">
+                <img src="ifmg-vertical-branca.png" alt="IFMG">
+                <strong>Reitoria</strong>
+              </div>
+              <ul>
+                <!-- LEVEL 2: PRIPPG -->
+                <li>
+                  <div class="org-node">
+                    <strong>PRIPPG</strong>
+                    <span style="font-size: 0.75rem; color: #ccc; font-weight: bold;">Pró-reitoria de
+                      Inovação,<br>Pesquisa e
+                      Pós-graduação</span>
+                  </div>
+                  <ul>
+                    <!-- LEVEL 3: PARQUE TECNOLÓGICO -->
+                    <li>
+                      <div class="org-node highlight-node" id="node-parque">
+                        <img src="LogoTerritoriosDeMinas.png" alt="Parque Tecnológico"
+                          style="max-width: 280px; max-height: 180px; margin-bottom: 0;">
+                      </div>
+                      <ul>
+                        <!-- LEVEL 4: UNIDADES -->
+                        <li>
+                          <div class="org-node small-node">
+                            Unidades<br>Tecnológicas
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <!-- LEVEL 3: NIT -->
+                    <li>
+                      <div class="org-node" id="node-nit"
+                        style="position: relative; margin-top: 15px; padding-right: 35px; padding-top: 20px;">
+                        <img src="LogoNIT.png" alt="NIT"
+                          style="position: absolute; top: -20px; right: -20px; max-height: 40px; background: white; padding: 5px; border-radius: 4px; box-shadow: 0 3px 8px rgba(0,0,0,0.4);">
+                        <strong>NIT / Agência de Inovação</strong>
+                      </div>
+                      <ul id="nit-children">
+                        <!-- LEVEL 4: DEPARTMENTS -->
+                        <li>
+                          <div class="org-node small-node">Centros de<br>Excelência</div>
+                          <div style="width: 2px; height: 30px; border-left: 2px dashed var(--green); margin: 0 auto;"></div>
+                          <div style="display: flex; gap: 10px; justify-content: center; background: white; padding: 8px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); width: max-content; margin: 0 auto; position: relative; z-index: 10;">
+                            <img src="LogoCEIA.jpeg" alt="CEIA" style="height: 35px; object-fit: contain;">
+                            <img src="LogoCEIPARTE.jpeg" alt="CEIPARTE" style="height: 35px; object-fit: contain;">
+                          </div>
+                        </li>
+                        <li>
+                          <div class="org-node small-node">Núcleo de<br>PI e TT</div>
+                        </li>
+                        <li>
+                          <div class="org-node small-node">Prospecção e<br>Parcerias</div>
+                        </li>
+                        <li>
+                          <div class="org-node small-node">Empreende-<br>dorismo</div>
+                        </li>
+                        <li>
+                          <div class="org-node small-node">Convênios e<br>Contratos</div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- LEVEL 2: POLO EMBRAPII -->
+                <li>
+                  <div class="org-node"
+                    style="position: relative; margin-top: 15px; padding-right: 35px; padding-top: 20px;">
+                    <img src="EMBRAPII_Logo.svg" alt="EMBRAPII"
+                      style="position: absolute; top: -20px; right: -20px; max-height: 40px; background: white; padding: 5px; border-radius: 4px; box-shadow: 0 3px 8px rgba(0,0,0,0.4);">
+                    <strong>Polo de Inovação</strong>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- SVG for dashed line -->
+          <svg id="org-svg-line"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></svg>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function drawOrgLine() {
+        const parque = document.getElementById('node-parque');
+        const nit = document.getElementById('node-nit');
+        const svg = document.getElementById('org-svg-line');
+        const chart = document.querySelector('.org-chart');
+
+        if (!parque || !svg || !chart || !nit) return;
+
+        const pRect = parque.getBoundingClientRect();
+        const nRect = nit.getBoundingClientRect();
+        const cRect = chart.getBoundingClientRect();
+
+        // Start at right side of Parque node
+        const startX = pRect.right - cRect.left;
+        const startY = pRect.top + (pRect.height / 2) - cRect.top;
+
+        // End at left side of NIT node
+        const endX = nRect.left - cRect.left;
+        const endY = nRect.top + (nRect.height / 2) - cRect.top;
+
+        // Line 1: Forward
+        const startY1 = startY - 3;
+        const endY1 = endY - 3;
+        const path1 = `M ${startX} ${startY1} L ${endX} ${endY1}`;
+
+        // Line 2: Backward
+        const startY2 = startY + 4;
+        const endY2 = endY + 4;
+        const path2 = `M ${startX} ${startY2} L ${endX} ${endY2}`;
+
+        svg.innerHTML = `
+          <path d="${path1}" stroke="rgba(62, 207, 87, 0.9)" stroke-width="2.5" stroke-dasharray="6,6" fill="none" style="animation: flowDash 1.2s linear infinite;" />
+          <path d="${path2}" stroke="rgba(62, 207, 87, 0.9)" stroke-width="2.5" stroke-dasharray="6,6" fill="none" style="animation: flowDashReverse 1.2s linear infinite;" />
+        `;
+      }
+
+      // We listen to our slide changes to redraw the line accurately when visible
+      setInterval(drawOrgLine, 1000); // Failsafe for resizing/display changes
+      window.addEventListener('resize', drawOrgLine);
+    </script>
+
+    <!-- SLIDE 15: GOVERNANÇA -->
+    <section class="slide slide-dark" id="s-gov">
+      <div class="slide-accent-bar left green"></div>
+      <div class="slide-content" style="padding-top: 80px;">
+        <div class="slide-tag tag-green" style="margin-bottom: 10px;">Gestão e Estrutura</div>
+        <h2 class="slide-title" style="margin-bottom: 5px; font-size: 2.5rem;">Governança do <span
+            class="text-green">Parque Tecnológico</span></h2>
+        <p class="slide-desc" style="font-size: 1.15rem; margin-bottom: 30px;">Composta por:</p>
+
+        <div class="gov-hierarchy"
+          style="display: flex; flex-direction: column; gap: 15px; max-width: 1000px; width: 100%; position: relative;">
+          <!-- Vertical connection line -->
+          <div
+            style="position: absolute; left: 55px; top: 30px; bottom: 30px; width: 3px; background: rgba(62, 207, 87, 0.5); z-index: 0; border-radius: 2px;">
+          </div>
+
+          <!-- 1. Conselho de Admin -->
+          <div class="gov-card-h">
+            <div class="gov-icon"><i class="ph ph-bank" style="color: #3ecf57;"></i></div>
+            <div class="gov-text">
+              <h3>Conselho de Administração</h3>
+              <p><strong>Papel:</strong> Órgão máximo de governança e deliberação do Parque Tecnológico.</p>
+              <p><strong>Composição:</strong> Membros Representantes do IFMG, Municípios e entidades empresariais ou
+                profissionais.</p>
+            </div>
+          </div>
+
+          <!-- 2. Diretoria Executiva -->
+          <div class="gov-card-h">
+            <div class="gov-icon"><i class="ph ph-briefcase" style="color: #3498db;"></i></div>
+            <div class="gov-text">
+              <h3>Diretoria Executiva</h3>
+              <p><strong>Papel:</strong> Gerencia as operações administrativas e financeiras do Parque Tecnológico
+                Distribuído.</p>
+              <p><strong>Composição:</strong> Servidores do IFMG.</p>
+            </div>
+          </div>
+
+          <!-- 3. Conselho Técnico-Científico -->
+          <div class="gov-card-h">
+            <div class="gov-icon"><i class="ph ph-flask" style="color: #f1c40f;"></i></div>
+            <div class="gov-text">
+              <h3>Conselho Técnico-Científico</h3>
+              <p><strong>Papel:</strong> Órgão consultivo para assessoramento em Desenvolvimento de Pesquisa e Inovação.
+              </p>
+              <p><strong>Composição:</strong> Especialistas de diversas áreas, servidores e colaboradores das
+                instituições parceiras.</p>
+            </div>
+          </div>
+
+          <!-- 4. Unidades Tecnológicas -->
+          <div class="gov-card-h">
+            <div class="gov-icon"><i class="ph ph-map-pin-line" style="color: #e74c3c;"></i></div>
+            <div class="gov-text">
+              <h3>Unidades Tecnológicas</h3>
+              <p><strong>Papel:</strong> Polos operacionais do Parque Tecnológico distribuídos pelo estado.</p>
+              <p><strong>Governança Própria:</strong> Conselho de Administração próprio (Membros IFMG, Governo Municipal
+                e Entidades do Município).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE: Parceiros do Parque Tecnológico -->
+    <section class="slide slide-dark" id="s-parceiros">
+      <div class="slide-content"
+        style="padding-top: 80px; align-items: center; justify-content: center; text-align: center;">
+        <h2 class="slide-title" style="margin-bottom: 50px; font-size: 2.8rem;">Parceiros do <span
+            class="text-green">Parque Tecnológico</span></h2>
+
+        <div
+          style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; align-items: center; max-width: 1000px; width: 100%;">
+          <div class="reveal-up delay-1"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/CSI-Lab.jpeg" alt="CSI-Lab"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-1"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/DTU.png" alt="DTU"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-1"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/FutureLab.jpg" alt="FutureLab"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-2"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/Minho.jpeg" alt="Minho"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-2"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/Parceiros - grande.png" alt="Parceiros"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-2"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/PortoDigital.png" alt="Porto Digital"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-2"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/RedeMineiraQueijos.jpeg" alt="Rede Mineira"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-3"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/Serpro.jpeg" alt="Serpro"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-3"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/UniversidadLaFrontera.jpg" alt="Universidad La Frontera"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-3"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/Xr4good.jpeg" alt="Xr4good"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-3"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/emater.png" alt="Emater"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-4"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/epamig.png" alt="Epamig"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-4"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/ima.png" alt="IMA"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-4"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/ital.png" alt="Ital"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-4"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/pciAveirologo.jpeg" alt="PCI Aveiro"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-4"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/ufmg.png" alt="UFMG"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+          <div class="reveal-up delay-5"
+            style="background: #fff; padding: 15px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); width: 150px; height: 100px;">
+            <img src="imagensParceiros/ufop.png" alt="UFOP"
+              style="max-width: 100%; max-height: 100%; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE: DESAFIOS -->
+    <section class="slide slide-dark" id="s-desafios">
+      <div class="slide-accent-bar right red"></div>
+      <div class="slide-content" style="padding-top: 60px; justify-content: flex-start; text-align: left;">
+        <div class="slide-tag tag-red" style="margin-bottom: 5px;">Obstáculos e Riscos</div>
+        <h2 class="slide-title" style="margin-bottom: 20px; font-size: 2.2rem;">Desafios na Implantação de um<br><span
+            class="text-red">Parque Tecnológico</span></h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; width: 100%;">
+
+          <!-- Card 1 -->
+          <div class="reveal-up delay-1"
+            style="flex: 1 1 30%; min-width: 280px; background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 12px; border-top: 4px solid #e74c3c;">
+            <h3
+              style="color: #e74c3c; font-size: 1.05rem; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.2;">
+              <i class="ph ph-scales" style="font-size: 1.3rem;"></i>
+              1. Modelo jurídico-institucional “fora da caixinha”
+            </h3>
+            <ul
+              style="font-size: 0.85rem; color: rgba(255,255,255,0.7); padding-left: 15px; margin: 0; display: flex; flex-direction: column; gap: 6px; line-height: 1.3;">
+              <li>Falta de enquadramento claro em leis existentes (parques tradicionais, etc.).</li>
+              <li>Dificuldade para estruturar governança híbrida (público–privada–comunitária).</li>
+              <li>Insegurança jurídica para contratos de longo prazo, uso compartilhado e modelos de “ownership”
+                distribuído.</li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="reveal-up delay-2"
+            style="flex: 1 1 30%; min-width: 280px; background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 12px; border-top: 4px solid #e74c3c;">
+            <h3
+              style="color: #e74c3c; font-size: 1.05rem; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.2;">
+              <i class="ph ph-currency-circle-dollar" style="font-size: 1.3rem;"></i>
+              2. Financiamento e sustentabilidade de longo prazo
+            </h3>
+            <ul
+              style="font-size: 0.85rem; color: rgba(255,255,255,0.7); padding-left: 15px; margin: 0; display: flex; flex-direction: column; gap: 6px; line-height: 1.3;">
+              <li>Investidor e governo tendem a financiar “obra” (CAPEX), mas pouco a gestão e manutenção (OPEX).</li>
+              <li>Dificuldade em provar tese de retorno financeiro em modelos inovadores.</li>
+              <li>Risco de dependência excessiva de emendas, editais ou subsídios que não se perpetuam.</li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="reveal-up delay-3"
+            style="flex: 1 1 30%; min-width: 280px; background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 12px; border-top: 4px solid #e74c3c;">
+            <h3
+              style="color: #e74c3c; font-size: 1.05rem; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.2;">
+              <i class="ph ph-users-three" style="font-size: 1.3rem;"></i>
+              3. Coordenação de múltiplos atores em rede
+            </h3>
+            <ul
+              style="font-size: 0.85rem; color: rgba(255,255,255,0.7); padding-left: 15px; margin: 0; display: flex; flex-direction: column; gap: 6px; line-height: 1.3;">
+              <li>Exige orquestração entre governos, universidades, empresas e investidores.</li>
+              <li>Ausência de uma “entidade-âncora” forte que imponha padrões, marca e governança.</li>
+              <li>Conflitos de interesse locais (uso do solo, gentrificação, captura política).</li>
+            </ul>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="reveal-up delay-4"
+            style="flex: 1 1 45%; min-width: 280px; background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 12px; border-top: 4px solid #e74c3c;">
+            <h3
+              style="color: #e74c3c; font-size: 1.05rem; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.2;">
+              <i class="ph ph-buildings" style="font-size: 1.3rem;"></i>
+              4. Infraestrutura e serviços em múltiplos nós
+            </h3>
+            <ul
+              style="font-size: 0.85rem; color: rgba(255,255,255,0.7); padding-left: 15px; margin: 0; display: flex; flex-direction: column; gap: 6px; line-height: 1.3;">
+              <li>Levar conectividade, laboratórios e serviços (IP, internacionalização) para pontos dispersos é caro.
+              </li>
+              <li>Garantir interoperabilidade tecnológica (dados, plataformas, identidade digital).</li>
+              <li>Manter padrões técnicos atualizados em todos os polos para evitar obsolescência.</li>
+            </ul>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="reveal-up delay-5"
+            style="flex: 1 1 45%; min-width: 280px; background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 12px; border-top: 4px solid #e74c3c;">
+            <h3
+              style="color: #e74c3c; font-size: 1.05rem; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.2;">
+              <i class="ph ph-magnet" style="font-size: 1.3rem;"></i>
+              5. Atração e retenção de talentos e empresas
+            </h3>
+            <ul
+              style="font-size: 0.85rem; color: rgba(255,255,255,0.7); padding-left: 15px; margin: 0; display: flex; flex-direction: column; gap: 6px; line-height: 1.3;">
+              <li>Competição com grandes centros (SP, RJ, BH, POA) para atrair startups e pesquisadores.</li>
+              <li>Gestores pouco acostumados com governança em rede, dados abertos e experimentação.</li>
+              <li>Dificuldade em criar identidade e "efeito de aglomeração" em vários territórios.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE: A UT São Gonçalo do Rio Abaixo -->
+    <section class="slide slide-dark" id="s-sao-goncalo"
+      style="background: url('UTSGRA-Frente.jpeg') no-repeat center center; background-size: cover;">
+      <div
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 0;">
+      </div>
+
+      <div class="slide-content" style="position: relative; z-index: 2; padding-top: 60px;">
+        <div class="slide-tag tag-green" style="margin-bottom: 10px;">Destaque</div>
+        <h2 class="slide-title" style="margin-bottom: 15px; font-size: 2.5rem;">A UT <span class="text-green">São
+            Gonçalo do Rio Abaixo <span class="text-white"> em momentos</span></h2>
+
+        <div class="gallery-container"
+          style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); max-width: 900px; text-align: center; position: relative; margin: 0 auto;">
+          <p style="margin-bottom: 10px; font-size: 1.1rem; color: #fff;">Clique na imagem para pausar/retomar ou
+            ampliá-la:</p>
+
+          <div id="dynamic-slideshow"
+            style="position: relative; width: 100%; max-width: 800px; height: 320px; margin: 0 auto; overflow: hidden; border-radius: 12px; border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); cursor: pointer;"
+            onclick="toggleSlideshow()">
+            <!-- Images will be injected here by JS -->
+          </div>
+
+          <div style="margin-top: 15px; display: flex; justify-content: center; gap: 15px; align-items: center;">
+            <button onclick="prevSlide()"
+              style="background: rgba(255,255,255,0.1); border: none; color: white; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 1.2rem;"><i
+                class="ph ph-caret-left"></i></button>
+            <span id="slide-counter" style="color: rgba(255,255,255,0.7); font-size: 1.1rem; min-width: 70px;">1 /
+              49</span>
+            <button onclick="toggleSlideshow()" id="btn-play-pause"
+              style="background: var(--green); border: none; color: white; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 1.2rem;"><i
+                class="ph ph-pause"></i></button>
+            <button onclick="nextSlide()"
+              style="background: rgba(255,255,255,0.1); border: none; color: white; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 1.2rem;"><i
+                class="ph ph-caret-right"></i></button>
+            <button onclick="openSlideshowLightbox()"
+              style="margin-left: 10px; background: rgba(52, 152, 219, 0.8); border: none; color: white; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 1.2rem;"><i
+                class="ph ph-arrows-out"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 15: ENCERRAMENTO -->
+    <section class="slide slide-closing" id="s14" style="background: #000;">
+      <div class="closing-content">
+        <img src="LogoTerritoriosDeMinas.png" alt="Logo Territórios de Minas" class="closing-logo reveal-up">
+        <div class="closing-logos reveal-up delay-2">
+          <img src="ifmg-vertical-branca.png" alt="IFMG" style="height: 120px; filter: none; opacity: 1;">
+        </div>
+        <p class="closing-event reveal-up delay-3" style="margin-bottom: 30px; color: #fff;">ENREDE MG 2026 · Juiz de
+          Fora · 27 e 28 de maio</p>
+        <p class="closing-future reveal-up delay-4"
+          style="color: rgba(255,255,255,0.75); font-size: 1.3rem; max-width: 800px; margin: 0 auto; line-height: 1.6; font-style: italic;">
+          "Novas Unidades de Tecnologia estão a caminho, em processo de fechamento da Aliança Estratégica, nos
+          municípios de Congonhas, Brumadinho, Mariana… que venham muitas outras!"
+        </p>
+
+        <div class="closing-contacts reveal-up delay-5"
+          style="margin-top: 40px; color: rgba(255,255,255,0.6); font-size: 1.05rem; display: flex; flex-direction: column; gap: 10px; align-items: center; line-height: 1.4;">
+          <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <span><i class="ph ph-phone" style="color: var(--green); margin-right: 5px;"></i> (31) 2513-5150</span>
+            <span><i class="ph ph-envelope-simple" style="color: var(--green); margin-right: 5px;"></i>
+              prppg@ifmg.edu.br</span>
+          </div>
+          <div><i class="ph ph-map-pin" style="color: var(--green); margin-right: 5px;"></i> PRIPPG - IFMG. Av. Prof.
+            Mário Werneck, 2590, 8° andar – Buritis, BH/MG</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Slide Thumbnail Navigator (Bottom) -->
+  <div class="thumbnail-nav" id="thumbNav">
+    <!-- dynamically generated -->
+  </div>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
+    <span onclick="closeLightbox()"
+      style="position: absolute; top: 30px; right: 50px; color: white; font-size: 50px; cursor: pointer; transition: color 0.2s;"
+      onmouseover="this.style.color='var(--green)';" onmouseout="this.style.color='white';">&times;</span>
+    <img id="lightbox-img" src=""
+      style="max-width: 90%; max-height: 90%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transform: scale(0.9); transition: transform 0.3s ease;">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      lb.style.display = 'flex';
+      setTimeout(() => {
+        lb.style.opacity = '1';
+        img.style.transform = 'scale(1)';
+      }, 10);
+    }
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      lb.style.opacity = '0';
+      img.style.transform = 'scale(0.9)';
+      setTimeout(() => {
+        lb.style.display = 'none';
+      }, 300);
+    }
+  </script>
+
+  <script>
+    // Dynamic Slideshow Logic
+    const allImages = [];
+
+    // Middle images 02 to 51
+    for (let i = 2; i <= 51; i++) {
+      const num = i.toString().padStart(2, '0');
+      allImages.push(`imagensSGRA/${num}.jpeg`);
+    }
+
+    // Randomize the middle images (Fisher-Yates)
+    for (let i = allImages.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [allImages[i], allImages[j]] = [allImages[j], allImages[i]];
+    }
+
+    // Add first and last
+    allImages.unshift('imagensSGRA/Primeira.jpeg');
+    allImages.push('imagensSGRA/Ultima.jpeg');
+
+    const slideshowContainer = document.getElementById('dynamic-slideshow');
+    const counterSpan = document.getElementById('slide-counter');
+    const btnPlayPause = document.getElementById('btn-play-pause');
+
+    let currentSlideIndex = 0;
+    let slideshowTimeout;
+
+    // Create elements
+    allImages.forEach((src, index) => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.style.position = 'absolute';
+      img.style.top = '0';
+      img.style.left = '0';
+      img.style.width = '100%';
+      img.style.height = '100%';
+      img.style.objectFit = 'contain';
+      img.style.opacity = index === 0 ? '1' : '0';
+      img.style.transition = 'opacity 0.8s ease-in-out';
+      img.style.zIndex = index === 0 ? '1' : '0';
+      img.id = 'slide-img-' + index;
+      if (slideshowContainer) slideshowContainer.appendChild(img);
+    });
+
+    function updateSlide(newIndex) {
+      const oldImg = document.getElementById('slide-img-' + currentSlideIndex);
+      if (oldImg) {
+        oldImg.style.opacity = '0';
+        oldImg.style.zIndex = '0';
+        oldImg.style.transform = 'scale(1)';
+        oldImg.style.transition = 'opacity 0.8s ease-in-out, transform 0.8s ease-in-out';
+      }
+
+      currentSlideIndex = newIndex;
+      if (currentSlideIndex >= allImages.length) currentSlideIndex = 0;
+      if (currentSlideIndex < 0) currentSlideIndex = allImages.length - 1;
+
+      const newImg = document.getElementById('slide-img-' + currentSlideIndex);
+      if (newImg) {
+        newImg.style.opacity = '1';
+        newImg.style.zIndex = '1';
+      }
+
+      if (counterSpan) counterSpan.innerText = (currentSlideIndex + 1) + ' / ' + allImages.length;
+    }
+
+    function queueNextSlide(isInitialStart = false) {
+      if (!isPlaying) return;
+      clearTimeout(slideshowTimeout);
+      // 2000ms delay for the first picture, 1000ms for the rest
+      const delay = isInitialStart ? 2000 : 1000;
+      slideshowTimeout = setTimeout(() => {
+        if (currentSlideIndex === allImages.length - 1) {
+          stopSlideshow();
+          const lastImg = document.getElementById('slide-img-' + currentSlideIndex);
+          if (lastImg) {
+            lastImg.style.transition = 'transform 4s ease-out, opacity 0.8s ease-in-out';
+            lastImg.style.transform = 'scale(1.15)';
+          }
+          return;
+        }
+        updateSlide(currentSlideIndex + 1);
+        queueNextSlide(false);
+      }, delay);
+    }
+
+    function nextSlide() {
+      updateSlide(currentSlideIndex + 1);
+      if (isPlaying) queueNextSlide(false);
+    }
+
+    function prevSlide() {
+      updateSlide(currentSlideIndex - 1);
+      if (isPlaying) queueNextSlide(false);
+    }
+
+    function startSlideshow(isInitialStart = false) {
+      isPlaying = true;
+      if (btnPlayPause) btnPlayPause.innerHTML = '<i class="ph ph-pause"></i>';
+      queueNextSlide(isInitialStart);
+    }
+
+    function stopSlideshow() {
+      isPlaying = false;
+      if (btnPlayPause) btnPlayPause.innerHTML = '<i class="ph ph-play"></i>';
+      clearTimeout(slideshowTimeout);
+    }
+
+    function toggleSlideshow() {
+      if (isPlaying) {
+        stopSlideshow();
+      } else {
+        startSlideshow(false);
+      }
+    }
+
+    function openSlideshowLightbox() {
+      stopSlideshow();
+      openLightbox(allImages[currentSlideIndex]);
+    }
+
+    // Reliable event listener to start slideshow when slide becomes active
+    document.addEventListener('slideChanged', (e) => {
+      if (e.detail.slideId === 's-sao-goncalo') {
+        updateSlide(0);
+        if (!isPlaying) startSlideshow(true);
+      } else {
+        stopSlideshow();
+      }
+    });
+  </script>
+
+  <script src="pres-script.js"></script>
+</body>
+
+</html>
