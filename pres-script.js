@@ -84,12 +84,24 @@
   window.goHome = () => goTo(0);
 
   window.toggleFullscreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(err => {
-        console.log(`Error attempting to enable fullscreen: ${err.message}`);
-      });
-    } else {
-      document.exitFullscreen();
+    try {
+      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen().catch(err => {
+            console.log(`Error attempting to enable fullscreen: ${err.message}`);
+          });
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          document.documentElement.webkitRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+      }
+    } catch (e) {
+      console.log("Fullscreen API error:", e);
     }
   };
 
@@ -145,5 +157,25 @@
       goTo(current + (e.deltaY > 0 ? 1 : -1));
     }, 50);
   }, { passive: false });
+
+  // Start Overlay logic for fullscreen
+  const startOverlay = document.getElementById('startOverlay');
+  if (startOverlay) {
+    startOverlay.addEventListener('click', () => {
+      try {
+        if (document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          document.documentElement.webkitRequestFullscreen();
+        }
+      } catch (err) {
+        console.log("Fullscreen API error:", err);
+      }
+      
+      startOverlay.style.opacity = '0';
+      startOverlay.style.pointerEvents = 'none';
+      setTimeout(() => startOverlay.remove(), 500);
+    });
+  }
 
 })();
