@@ -15,6 +15,13 @@
 
 <body>
 
+  <!-- Start Overlay -->
+  <div id="startOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 10000; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; cursor: pointer; transition: opacity 0.5s ease;">
+    <img src="LogoTerritoriosDeMinas.png" alt="Logo" style="max-width: 300px; margin-bottom: 30px;">
+    <button style="background: #3ecf57; color: white; border: none; padding: 15px 40px; font-size: 1.5rem; font-weight: 700; border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 30px rgba(62, 207, 87, 0.4);"><i class="ph ph-play-circle" style="font-size: 2rem;"></i> Iniciar Apresentação</button>
+    <p style="margin-top: 20px; color: rgba(255,255,255,0.5); font-size: 0.9rem;">(A apresentação será iniciada em tela cheia)</p>
+  </div>
+
   <!-- Navigation Controls -->
   <div class="controls">
     <button class="ctrl-btn" id="prevBtn" onclick="changeSlide(-1)" title="Anterior">
@@ -89,7 +96,7 @@
           </div>
           <div class="connector"></div>
           <div class="icon-block">
-            <div class="icon-circle red-bg"><i class="ph ph-graduation-cap"></i></div>
+            <div class="icon-circle blue-bg"><i class="ph ph-graduation-cap"></i></div>
             <span>Profissionais<br>Qualificados</span>
           </div>
           <div class="connector"></div>
@@ -110,17 +117,17 @@
         <h2 class="slide-title text-white">Três atores.<br>Um ecossistema.</h2>
         <div class="trio-grid">
           <div class="trio-card">
-            <div class="trio-number" style="color: var(--red);">01</div>
+            <div class="trio-number" style="color: var(--green);">01</div>
             <h3>IFMG</h3>
             <p>Base acadêmica, gerador de pesquisa, desenvolvimento de tecnologias e formação qualificada.</p>
           </div>
           <div class="trio-card trio-highlight">
-            <div class="trio-number" style="color: var(--red);">02</div>
+            <div class="trio-number" style="color: var(--green);">02</div>
             <h3>Governo</h3>
             <p>Criação de políticas de fomento, infraestrutura e incentivos fiscais para o ecossistema.</p>
           </div>
           <div class="trio-card">
-            <div class="trio-number" style="color: var(--red);">03</div>
+            <div class="trio-number" style="color: var(--green);">03</div>
             <h3>Indústria</h3>
             <p>Transformação de conhecimento em soluções reais para o mercado.</p>
           </div>
@@ -130,10 +137,10 @@
 
     <!-- SLIDE 5: BENEFÍCIOS -->
     <section class="slide slide-dark" id="s5">
-      <div class="slide-accent-bar right red"></div>
+      <div class="slide-accent-bar right green"></div>
       <div class="slide-content">
         <div class="slide-tag">Por que importa?</div>
-        <h2 class="slide-title">Benefícios <span class="text-red">Concretos</span></h2>
+        <h2 class="slide-title">Benefícios <span class="text-green">Concretos</span></h2>
         <div class="benefits-container">
           <div class="circular-benefits">
             <div class="orbit orbit-1"></div>
@@ -399,9 +406,9 @@
             <h3 style="font-size: 1.15rem; margin-bottom: 0;">Centros de Excelência</h3>
           </div>
           <div class="trio-card" style="text-align: center; padding: 20px;">
-            <div class="trio-number" style="color: #e74c3c; font-size: 2rem; margin-bottom: 5px;">04</div>
+            <div class="trio-number" style="color: #9b59b6; font-size: 2rem; margin-bottom: 5px;">04</div>
             <i class="ph ph-graduation-cap"
-              style="font-size: 2.5rem; color: #e74c3c; margin-bottom: 10px; display:block;"></i>
+              style="font-size: 2.5rem; color: #9b59b6; margin-bottom: 10px; display:block;"></i>
             <h3 style="font-size: 1.15rem; margin-bottom: 0;">Desenv. Organizacional</h3>
           </div>
           <div class="trio-card" style="text-align: center; padding: 20px;">
@@ -559,33 +566,33 @@
 
     <!-- SLIDE 8.4: DESENVOLVIMENTO ORGANIZACIONAL -->
     <section class="slide slide-dark" id="s8-4">
-      <div class="slide-accent-bar left red"></div>
+      <div class="slide-accent-bar left" style="background: #9b59b6;"></div>
       <div class="slide-content">
-        <div class="slide-tag" style="background: #e74c3c; color: #fff; margin-bottom: 10px;">EIXO 04</div>
+        <div class="slide-tag" style="background: #9b59b6; color: #fff; margin-bottom: 10px;">EIXO 04</div>
         <h4
           style="color: rgba(255,255,255,0.5); font-weight: 500; font-size: 1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
           Composição da Unidade Tecnológica | Parque Tecnológico Territórios de Minas</h4>
-        <h2 class="slide-title" style="color: #e74c3c; margin-bottom:10px; font-size: 2.2rem;"><i
+        <h2 class="slide-title" style="color: #9b59b6; margin-bottom:10px; font-size: 2.2rem;"><i
             class="ph ph-graduation-cap"></i> Desenvolvimento Organizacional</h2>
         <p class="slide-desc" style="font-size: 1.15rem; max-width: 800px; margin-bottom: 20px;">Programas e ações que
           promovem competências, inovação e transformação nas organizações.</p>
         <div class="obj-list" style="max-width: 950px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
           <div class="obj-item">
-            <i class="ph ph-certificate" style="color: #e74c3c;"></i>
+            <i class="ph ph-certificate" style="color: #9b59b6;"></i>
             <div>
               <h4>Cursos FIC</h4>
               <p>Qualificação profissional e inserção no mundo do trabalho.</p>
             </div>
           </div>
           <div class="obj-item">
-            <i class="ph ph-puzzle-piece" style="color: #e74c3c;"></i>
+            <i class="ph ph-puzzle-piece" style="color: #9b59b6;"></i>
             <div>
               <h4>FIC Técnico Modular</h4>
               <p>Itinerários formativos flexíveis com certificações intermediárias.</p>
             </div>
           </div>
           <div class="obj-item">
-            <i class="ph ph-books" style="color: #e74c3c;"></i>
+            <i class="ph ph-books" style="color: #9b59b6;"></i>
             <div>
               <h4>Lato Sensu</h4>
               <p>Pós-graduação voltada ao aprofundamento técnico e profissional.</p>
@@ -829,7 +836,7 @@
 
           <!-- 4. Unidades Tecnológicas -->
           <div class="gov-card-h">
-            <div class="gov-icon"><i class="ph ph-map-pin-line" style="color: #e74c3c;"></i></div>
+            <div class="gov-icon"><i class="ph ph-map-pin-line" style="color: #9b59b6;"></i></div>
             <div class="gov-text">
               <h3>Unidades Tecnológicas</h3>
               <p><strong>Papel:</strong> Polos operacionais do Parque Tecnológico distribuídos pelo estado.</p>
@@ -944,8 +951,8 @@
       <div class="slide-accent-bar right red"></div>
       <div class="slide-content" style="padding-top: 60px; justify-content: flex-start; text-align: left;">
         <div class="slide-tag tag-red" style="margin-bottom: 5px;">Obstáculos e Riscos</div>
-        <h2 class="slide-title" style="margin-bottom: 20px; font-size: 2.2rem;">Desafios na Implantação de um<br><span
-            class="text-red">Parque Tecnológico</span></h2>
+        <h2 class="slide-title" style="margin-bottom: 20px; font-size: 2.2rem;"><span class="text-red">Desafios na Implantação de um</span><br><span
+            class="text-white">Parque Tecnológico</span></h2>
 
         <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; width: 100%;">
 
@@ -1000,7 +1007,7 @@
 
           <!-- Card 4 -->
           <div class="reveal-up delay-4"
-            style="flex: 1 1 45%; min-width: 280px; background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 12px; border-top: 4px solid #e74c3c;">
+            style="flex: 1 1 30%; min-width: 280px; background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 12px; border-top: 4px solid #e74c3c;">
             <h3
               style="color: #e74c3c; font-size: 1.05rem; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.2;">
               <i class="ph ph-buildings" style="font-size: 1.3rem;"></i>
@@ -1017,7 +1024,7 @@
 
           <!-- Card 5 -->
           <div class="reveal-up delay-5"
-            style="flex: 1 1 45%; min-width: 280px; background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 12px; border-top: 4px solid #e74c3c;">
+            style="flex: 1 1 30%; min-width: 280px; background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 12px; border-top: 4px solid #e74c3c;">
             <h3
               style="color: #e74c3c; font-size: 1.05rem; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.2;">
               <i class="ph ph-magnet" style="font-size: 1.3rem;"></i>
@@ -1028,6 +1035,22 @@
               <li>Competição com grandes centros (SP, RJ, BH, POA) para atrair startups e pesquisadores.</li>
               <li>Gestores pouco acostumados com governança em rede, dados abertos e experimentação.</li>
               <li>Dificuldade em criar identidade e "efeito de aglomeração" em vários territórios.</li>
+            </ul>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="reveal-up delay-6"
+            style="flex: 1 1 30%; min-width: 280px; background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 12px; border-top: 4px solid #e74c3c;">
+            <h3
+              style="color: #e74c3c; font-size: 1.05rem; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.2;">
+              <i class="ph ph-brain" style="font-size: 1.3rem;"></i>
+              6. Perfil profissional para implantação
+            </h3>
+            <ul
+              style="font-size: 0.85rem; color: rgba(255,255,255,0.7); padding-left: 15px; margin: 0; display: flex; flex-direction: column; gap: 6px; line-height: 1.3;">
+              <li>Escassez de talentos com o perfil técnico e gerencial exigido por uma unidade tão inovadora.</li>
+              <li>Desafio de formar e preparar equipes para liderar projetos de alta complexidade.</li>
+              <li>Necessidade de capacitação constante para acompanhar o ritmo ágil de um parque tecnológico.</li>
             </ul>
           </div>
 
